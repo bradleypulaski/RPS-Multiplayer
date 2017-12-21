@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Rock Paper Scissors!</title>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div id="start-overlay">
+            <div id="start-container">
+                <h2>Name:</h2><input type="text" id="name" /><br/><br/>
+                <button id="start-game">Start!</button>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="move">
+                 <button id="reset">Reset Game</button>
+                <div id="currentmoves">
+
+                </div>
+                <div id="status">
+                    Wins: <div class="status" id="wins">0</div>
+                    Losses: <div class="status"  id="losses">0</div>
+                    Ties: <div  class="status" id="ties">0</div>
+                </div>
+                <br/>
+
+                <div data-move="rock" class="move"><img src="assets/images/rock.png" /></div>
+                <div data-move="paper" class="move"><img src="assets/images/paper.png" /></div>
+                <div data-move="scissor" class="move"><img src="assets/images/scissors.png" /></div>
+            </div>
+            <div id="chatlog">
+                <h1 style="color:white">Chat</h1>
+                <div id="message-container"></div>
+                <div id="chatbox-container">
+                    <div id="writing"></div>
+                    <input type="text" id="chatbox" /><button id="chat-submit">Send</button>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/logic.js"></script>
+ 
+    </body>
+</html>
